@@ -1,7 +1,3 @@
-#TODO's
-#organizar o codigo
-#criar testes
-#atualizar o readme
 class SequenceNumber
 
   def initialize(message)
