@@ -1,3 +1,4 @@
+#TODO's
 #organizar o codigo
 #criar testes
 #atualizar o readme
@@ -35,7 +36,7 @@ if input.size <= limit_of_chars
     digits.map{ |digit|
       #>> SE O CARACTER EXISTE NO CONJUNTO DE CARACTERES ATUAIS INCREMENTA NO OUTPUT
       if digit.has_key?(char.upcase)
-        #>> SE O ÚLTIMO DIGITO FOR IGUAL AO DIGITO ATUAL ENTÃO ACRESCENTA _ 
+        #>> SE O ÚLTIMO DIGITO FOR IGUAL AO DIGITO ATUAL ENTÃO ACRESCENTA _
         if last_digit === digit[char.upcase][0,1]
           output << "_#{digit[char.upcase]}"
         else
