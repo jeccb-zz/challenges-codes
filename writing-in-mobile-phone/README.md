@@ -33,10 +33,3 @@ Por exemplo, para digitar "SEMPRE ACESSO O DOJOPUZZLES", você precisa digitar:
 ```
 
 [referencia](http://dojopuzzles.com/problemas/exibe/escrevendo-no-celular/)
-
-```
-TODO's
-  [] organizar o codigo
-  [] criar testes
-  [] atualizar o readme
-```
