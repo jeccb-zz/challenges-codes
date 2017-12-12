@@ -6,23 +6,27 @@ class SequenceNumber
 
   LIMIT_OF_CHARS = 255
 
-  def process
+  def convert
     return "Input deve ser menor ou igual a #{LIMIT_OF_CHARS}" if @message.size >= LIMIT_OF_CHARS
-    parser = DigitParser.new
-    output, last_digit = ""
-    @message.upcase.chars.map{ |char|
-      output << "0" && last_digit = '' if char.strip.empty?
-      parser.digits.map{ |digit|
+    output = ""
+
+    @message.upcase.chars.each do |char|
+      if char.strip.empty?
+        output << "0"
+        next;
+      end
+
+      DigitEnum::DIGITS.each do |digit|
         if digit.has_key?(char.upcase)
-          if last_digit === digit[char.upcase][0,1]
+          if output.chars.last === digit[char.upcase][0,1]
             output << "_#{digit[char.upcase]}"
-          else
-            output << digit[char.upcase]
+            next;
           end
-          last_digit = digit[char.upcase][0,1]
+
+          output << digit[char.upcase]
         end
-         }
-    }
+      end
+    end
     return output
   end
 end

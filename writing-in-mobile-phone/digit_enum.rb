@@ -1,6 +1,4 @@
-class DigitParser
-
-  attr_accessor :digits
+class DigitEnum
 
   TWO = {"A"=> "2", "B"=> "22", "C" => "222" }
   THREE = {"D"=> "3", "E"=> "33", "F" => "333" }
@@ -11,7 +9,5 @@ class DigitParser
   EIGHT = {"T"=> "8", "U"=> "88", "V" => "888" }
   NINE = {"W"=> "9", "X"=> "99", "Y" => "999", "Z" => "9999" }
 
-  def digits
-    [TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE]
-  end
+  DIGITS = [TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE]
 end
