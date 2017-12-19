@@ -15,7 +15,7 @@ class SequenceNumber
         output << "0"
         next;
       end
-
+      
       DigitEnum::DIGITS.each do |digit|
         if digit.has_key?(char.upcase)
           if output.chars.last === digit[char.upcase][0,1]
