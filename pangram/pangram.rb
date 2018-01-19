@@ -3,11 +3,9 @@ module BookKeeping
 end
 
 class Pangram
-  LETTERS = ('a'..'z').to_a
-
   def self.pangram?(phrase)
-    LETTERS.each do |letter|
-      return false unless phrase.downcase.chars.include?(letter)
+    ('a'..'z').to_a.each do |letter|
+      return unless phrase.downcase.chars.include?(letter)
     end
   end
 end
